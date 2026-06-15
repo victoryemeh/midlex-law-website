@@ -14,7 +14,7 @@ import frontArrow from "./front-arrow.svg";
 import locationArrow from "./location-arrow.svg";
 import envelope from "./envelope.svg";
 import telephone from "./telephone.svg";
-import TheTeam from "./the-team.png";
+import TheTeam from "./The-team.png";
 import EsqMishack from "./esq-mishack.png";
 import VisionIcon from "./vision-icon.svg";
 import MissionIcon from "./mission-icon.svg";
