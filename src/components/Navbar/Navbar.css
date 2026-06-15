@@ -1,0 +1,144 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 68px;
+  padding: 40px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Fully transparent — sits over the hero background image */
+  background: transparent;
+  transition:
+    background 0.35s,
+    box-shadow 0.35s;
+}
+
+.navbar--scrolled {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar__logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar__logo-icon {
+  width: 44px;
+  height: 44px;
+  background: #2d5a3d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__logo-letter {
+  color: #b8963e;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.navbar__logo-image {
+  height: 80px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+}
+
+/* Desktop nav links */
+.navbar__links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  color: #2d5a3d;
+}
+
+/* Transparent navbar over hero — keep links dark (hero bg is light/warm) */
+.navbar:not(.navbar--scrolled) .nav-link {
+  color: #1a1a1a;
+}
+.navbar:not(.navbar--scrolled) .nav-link:hover {
+  color: #2d5a3d;
+}
+
+/* Hamburger */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.navbar__hamburger-line {
+  width: 24px;
+  height: 2px;
+  background: #1a1a1a;
+  display: block;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: #fff;
+  flex-direction: column;
+  padding: 20px 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.is-open {
+  display: flex;
+}
+
+.mobile-menu .nav-link {
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  display: block;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+}
