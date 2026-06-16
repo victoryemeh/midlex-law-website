@@ -377,7 +377,8 @@ body::-webkit-scrollbar {
   bottom: 0;
   right: 60px;
   display: flex;
-  align-items: flex-end;
+  /* align-items: flex-end; */
+  align-self: flex-end;
   justify-content: center;
   height: 90vh;
   width: auto;
@@ -386,11 +387,7 @@ body::-webkit-scrollbar {
 }
 
 .hero__image-frame {
-  width: 480px;
   height: 100%;
-  overflow: visible;
-  display: flex;
-  align-items: flex-end;
 }
 
 .hero__image-frame img {
