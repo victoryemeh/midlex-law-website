@@ -308,24 +308,28 @@ body::-webkit-scrollbar {
 }
 
 .hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 0;
-  overflow: hidden;
+    justify-content: space-around;
+    max-width: 1440px;
+    min-height: 100vh;
+    padding: 0 80px;
+    margin: 0 auto;
+    display: flex;
 }
 
 .hero__inner {
-  display: flex;
+  /* display: flex;
   width: 100%;
   padding: 0 80px;
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
   gap: 60px;
-  position: relative;
+  position: relative; */
+  justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
 }
 
 /* LEFT: text content */
@@ -369,7 +373,7 @@ body::-webkit-scrollbar {
 
 /* RIGHT: statue — absolutely pinned, right side, full height */
 .hero__image-wrap {
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   right: 60px;
   display: flex;
