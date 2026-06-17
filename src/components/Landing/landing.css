@@ -1127,6 +1127,12 @@ body::-webkit-scrollbar {
     padding: 0 20px;
     height: 64px;
   }
+  .navbar {
+    position: sticky;
+  }
+  .hero-wrapper {
+  height: 80vh;
+}
 
   .navbar__links {
     display: none;
@@ -1142,31 +1148,32 @@ body::-webkit-scrollbar {
 
   /* ── Hero ── */
   .hero {
-    min-height: 100svh;
-    height: 100svh;
-    align-items: flex-start;
+    /* min-height: 100svh; */
+    height: 80svh;
+    padding: 0 24px;
+    display: flex;
+    /* align-items: flex-start;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; */
   }
 
   .hero__inner {
     flex-direction: column;
-    padding: 0 24px;
-    padding-top: 90px;
-    gap: 0;
+   
+    
+    
     align-items: center;           /* CENTER — matches Figma mobile */
-    justify-content: flex-start;
+    justify-content: space-around;
     height: 100%;
-    width: 100%;
-    position: relative;
+    
+    
     z-index: 2;
-    min-height: unset;
+    
   }
 
   /* Text block: centered */
   .hero-content {
-    padding-left: 0;
-    padding-top: 8px;
+    
     text-align: center;            /* CENTER — matches Figma mobile */
     width: 100%;
     flex-shrink: 0;
@@ -1546,11 +1553,11 @@ body::-webkit-scrollbar {
    ============================================================ */
 @media (max-width: 480px) {
 
-  .hero__inner {
+  /* .hero__inner {
     padding-top: 80px;
     padding-left: 20px;
     padding-right: 20px;
-  }
+  } */
 
   .hero-content .hero-anim,
   .hero__heading {
@@ -1632,11 +1639,11 @@ body::-webkit-scrollbar {
    ============================================================ */
 @media (max-width: 390px) {
 
-  .hero__inner {
+  /* .hero__inner {
     padding-top: 75px;
     padding-left: 16px;
     padding-right: 16px;
-  }
+  } */
 
   .hero-content .hero-anim,
   .hero__heading {
