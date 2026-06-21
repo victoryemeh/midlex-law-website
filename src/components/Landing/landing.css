@@ -161,7 +161,8 @@ body::-webkit-scrollbar {
   left: 0;
   right: 0;
   z-index: 100;
-  margin: 0;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 1px 80px;
   width: 100%;
   display: flex;
@@ -318,6 +319,8 @@ body::-webkit-scrollbar {
   /* padding: 0 clamp(80px, 8vw, 180px);    */
   padding: 0 80px;
   display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
   
 }
 
@@ -378,8 +381,8 @@ body::-webkit-scrollbar {
   /* align-items: flex-end; */
   align-self: flex-end;
   justify-content: center;
-  height: 90vh;
-   /* height: min(90vh, 820px); */
+  /* height: 90vh; */
+   height: min(90vh, 820px);
   width: auto;
   pointer-events: none;
   z-index: 1;
