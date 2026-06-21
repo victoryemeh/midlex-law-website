@@ -100,7 +100,7 @@ export default function AboutUs() {
         style={{ backgroundImage: `url(${assets.herobg})` }}
       >
         <div className="about-hero__overlay" />
-        <div className="container">
+        
           <div className="about-hero__content">
             <h1 className="about-hero__heading">About Midlex</h1>
             <p className="about-hero__desc">
@@ -109,7 +109,7 @@ export default function AboutUs() {
               advancing justice and meaningful impact.
             </p>
           </div>
-        </div>
+        
       </section>
 
       {/* Who We Are Section */}

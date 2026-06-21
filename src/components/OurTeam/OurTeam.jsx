@@ -37,7 +37,7 @@ export default function OurTeam() {
         style={{ backgroundImage: `url(${assets.herobg})` }}
       >
         <div className="our-team-hero__overlay" />
-        <div className="container">
+        
           <div className="our-team-hero__content">
             <h1 className="our-team-hero__heading">Modern Legal Excellence</h1>
             <p className="our-team-hero__desc">
@@ -46,7 +46,7 @@ export default function OurTeam() {
               landscape.
             </p>
           </div>
-        </div>
+        
       </section>
 
       {/* Team Section */}

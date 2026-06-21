@@ -38,7 +38,8 @@ body::-webkit-scrollbar {
 }
 
 .container {
-  
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 0 60px;
 }
 
@@ -161,8 +162,8 @@ body::-webkit-scrollbar {
   left: 0;
   right: 0;
   z-index: 100;
-  max-width: 1440px;
-  margin: 0 auto;
+  /* max-width: 1440px;
+  margin: 0 auto; */
   padding: 1px 80px;
   width: 100%;
   display: flex;
@@ -381,8 +382,8 @@ body::-webkit-scrollbar {
   /* align-items: flex-end; */
   align-self: flex-end;
   justify-content: center;
-  /* height: 90vh; */
-   height: min(90vh, 820px);
+  height: 90vh;
+   /* height: min(90vh, 820px); */
   width: auto;
   pointer-events: none;
   z-index: 1;
@@ -908,6 +909,8 @@ body::-webkit-scrollbar {
   /* gap: clamp(40px, 6vw, 143px);  */
   gap: 143px;
   border-bottom: 1px solid #9ca3af;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 .footer-content-company {

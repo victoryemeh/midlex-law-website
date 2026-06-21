@@ -394,29 +394,31 @@ export default function Contact() {
 
       {/* Locations Section */}
       <section className="locations-section">
-        <h2 className="locations-title">Our Locations</h2>
-        <div className="locations-carousel">
-          {locations.map((location, index) => (
-            <div key={index} className="location-card">
-              <div className="location-card__image">
-                <img src={location.image} alt={location.name} />
-              </div>
-              <div className="location-card__content">
-                <h3 className="location-name">{location.name}</h3>
-                <div className="location-info">
-                  <div className="location-info__group">
-                    <label>ADDRESS</label>
-                    <p>{location.address}</p>
-                  </div>
-                  <div className="location-info__group">
-                    <label>PHONE</label>
-                    <p>{location.phones.join(", ")}</p>
+        
+          <h2 className="locations-title">Our Locations</h2>
+          <div className="locations-carousel">
+            {locations.map((location, index) => (
+              <div key={index} className="location-card">
+                <div className="location-card__image">
+                  <img src={location.image} alt={location.name} />
+                </div>
+                <div className="location-card__content">
+                  <h3 className="location-name">{location.name}</h3>
+                  <div className="location-info">
+                    <div className="location-info__group">
+                      <label>ADDRESS</label>
+                      <p>{location.address}</p>
+                    </div>
+                    <div className="location-info__group">
+                      <label>PHONE</label>
+                      <p>{location.phones.join(", ")}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        
       </section>
 
       {/* CTA Band */}
