@@ -1,58 +1,5 @@
 
-/* @font-face {
-  font-family: "Inter Display";
-  src: url("assets/webfonts/Inter-Display-Bold.woff2") format("woff2"),
-    url("assets/webfonts/Inter-Display-Medium.woff2") format("woff2"),
-    url("assets/webfonts/Inter-Display-Regular.woff2") format("woff2"),
-    url("/fonts/Inter-Display-Regular.ttf") format("woff") ;
-}
 
-@font-face {
-  font-family: "Libre Caslon Condensed";
-  src: url("assets/webfonts/LibreCaslonCondensed-Bold.woff2") format("woff2"),
-    url("assets/webfonts/LibreCaslonCondensed-Medium.woff2") format("woff2"),
-    url("/fonts/LibreCaslonCondensed-Regular.ttf") format("woff");
-    
-  
-  font-style: normal;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Inter Display", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #fff;
-  color: #333;
-}
-h1{
-  font-family: "Libre Caslon Condensed", serif;
-  
-}
-p{
-  font-family: "Inter Display", sans-serif;
-}
-
-#root {
-  width: 100%;
-  min-height: 100vh;
-  
-}
-
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width:100%;
- 
-  margin: auto;
-  
-} */
 /* ── Inter Display ─────────────────────────────────── */
 @font-face {
   font-family: "Inter Display";
@@ -139,7 +86,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
   color: #333;
-  margin: auto;
+  /* margin: 0 auto;
+  max-width: 1440px; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -160,5 +108,6 @@ p {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
-  margin: auto;
+  margin: 0;
+  /* max-width: 1440px; */
 }

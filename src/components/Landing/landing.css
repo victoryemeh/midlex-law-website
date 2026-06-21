@@ -3,9 +3,7 @@
    ============================================================ */
 
 /* ── Reset & Base ─────────────────────────────────────── */
-*,
-*::before,
-*::after {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -40,8 +38,7 @@ body::-webkit-scrollbar {
 }
 
 .container {
-  max-width: 1440px;
-  margin: 0 auto;
+  
   padding: 0 60px;
 }
 
@@ -307,24 +304,25 @@ body::-webkit-scrollbar {
   pointer-events: none;
 }
 
-.hero {
+/* .hero {
     justify-content: space-around;
     max-width: 1440px;
     min-height: 100vh;
     padding: 0 80px;
     margin: 0 auto;
     display: flex;
+} */
+ .hero {
+  justify-content: space-around;
+  min-height: 100vh;
+  /* padding: 0 clamp(80px, 8vw, 180px);    */
+  padding: 0 80px;
+  display: flex;
+  
 }
 
 .hero__inner {
-  /* display: flex;
-  width: 100%;
-  padding: 0 80px;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh;
-  gap: 60px;
-  position: relative; */
+  
   justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -338,7 +336,7 @@ body::-webkit-scrollbar {
   align-self: center;
   padding-left: 40px;
   flex: 0 0 auto;
-  /* max-width: 520px; */
+  /* max-width: clamp(480px, 32vw, 600px); */
   max-width: 600px;
   position: relative;
 }
@@ -374,13 +372,14 @@ body::-webkit-scrollbar {
 /* RIGHT: statue — absolutely pinned, right side, full height */
 .hero__image-wrap {
   /* position: absolute; */
-  bottom: 0;
-  right: 60px;
+  /* bottom: 0;
+  right: 60px; */
   display: flex;
   /* align-items: flex-end; */
   align-self: flex-end;
   justify-content: center;
   height: 90vh;
+   /* height: min(90vh, 820px); */
   width: auto;
   pointer-events: none;
   z-index: 1;
@@ -625,8 +624,8 @@ body::-webkit-scrollbar {
 }
 
 .stats__row {
-  max-width: 1440px;
-  margin: 0 auto;
+  /* max-width: 1440px;
+  margin: 0 auto; */
   display: flex;
   justify-content: space-around;
   gap: 40px;
@@ -884,19 +883,33 @@ body::-webkit-scrollbar {
    ============================================================ */
 .footer {
   background: #0d3728;
-  padding: 64px 80px;
+  /* padding: 64px 80px; */
+  padding:80px 80px 0;
   display: flex;
   color: #f9fafb;
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  /* margin: 0 auto;
+  max-width: 1440px; */
 }
 
-.footer__grid {
+/* .footer__grid {
   display: flex;
   padding: 64px 0px;
   align-items: flex-start;
   align-self: stretch;
+  gap: 143px;
+  border-bottom: 1px solid #9ca3af;
+} */
+ .footer__grid {
+  display: flex;
+  /* flex-wrap: wrap;              */
+  padding: 64px 0px;
+  align-items: flex-start;
+  align-self: stretch;
+  justify-content: space-between;
+  /* gap: clamp(40px, 6vw, 143px);  */
   gap: 143px;
   border-bottom: 1px solid #9ca3af;
 }
@@ -1006,11 +1019,27 @@ body::-webkit-scrollbar {
    ============================================================ */
 @media (min-width: 769px) and (max-width: 1024px) {
 
-  /* Hero */
-  .hero {
+  
+
+  /* .hero {
     min-height: 100vh;
     overflow: hidden;
+    padding: 0;              
+  } */
+   .navbar {
+    padding: 1px 40px;     /* matches your .container tablet padding */
   }
+  .navbar__links {
+    gap: 20px;             /* a bit tighter so labels don't crowd */
+  }
+   .hero {
+  justify-content: space-around;
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 0 clamp(40px, 6vw, 80px);   /* eases in just above 1024px */
+  display: flex;
+}
 
   .hero__inner {
     padding: 0 40px;
@@ -1021,28 +1050,14 @@ body::-webkit-scrollbar {
     justify-content: flex-start;
   }
 
-  .hero-content {
-    padding-left: 0;
+  
+ .hero-content {
     z-index: 2;
-    position: relative;
     align-self: center;
-    /* max-width: 420px; */
-    max-width: 450px;
-  }
-
-  .hero-content .hero-anim,
-  .hero__heading {
-    font-size: clamp(36px, 4.5vw, 48px);
-    letter-spacing: -1px;
-    line-height: 1.1;
-    margin-bottom: 16px;
-  }
-
-  .hero__sub {
-    font-size: 15px;
-    line-height: 1.6;
-    margin-top: 12px;
-    margin-bottom: 28px;
+    padding-left: 0;                         /* hero__inner already insets 40px — don't double up */
+    flex: 0 0 auto;
+    max-width: clamp(280px, 36vw, 400px);     /* tablet-scaled, not desktop's 600px */
+    position: relative;
   }
 
   .hero__image-wrap {
@@ -1050,32 +1065,13 @@ body::-webkit-scrollbar {
     top: 0;
     bottom: 0;
     right: 0;
-    width: 500px;
-    height: 100vh;
+    width: clamp(240px, 38vw, 440px);         /* tablet-scaled, not desktop's 500px */
     overflow: visible;
     pointer-events: none;
     z-index: 1;
   }
 
-  .hero__image-frame {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    overflow: visible;
-  }
 
-  .hero__image-frame img {
-    height: 90vh;
-    width: auto;
-    max-width: none;
-    object-fit: contain;
-    object-position: bottom center;
-    display: block;
-  }
-
-  /* Other sections */
   .container {
     padding: 0 40px;
   }
@@ -1146,24 +1142,21 @@ body::-webkit-scrollbar {
 
   /* ── Hero ── */
   .hero {
-    /* min-height: 100svh; */
-    height: 80svh;
-    min-height: 80svh;
+    
+    min-height: 100svh;
     padding: 0 24px;
     display: flex;
-    /* align-items: flex-start;
-    position: relative;
-    overflow: hidden; */
+    
   }
 .hero-wrapper {
-  min-height: 80svh;
+  min-height: 100svh;
 }
   .hero__inner {
     flex-direction: column;
-    align-items: center;           /* CENTER — matches Figma mobile */
+    align-items: center;           
     justify-content: space-between;
     height: 100%;
-    min-height: 80svh;
+    min-height: 100svh;
     padding-top: 10%;
     z-index: 2;
     

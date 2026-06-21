@@ -9,7 +9,7 @@
 .services-hero {
   position: relative;
   width: 100%;
-  min-height: 750px;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -29,6 +29,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   opacity: 0.8;
 }
 
@@ -36,7 +37,7 @@
   position: relative;
   z-index: 2;
   padding: 80px 80px;
-  max-width: 630px;
+  /* max-width: 630px; */
   /* display: flex;
   flex-direction: column;
   gap: 24px; */
@@ -80,6 +81,7 @@ gap: 32px;
   display: flex;
   gap: 16px;
   margin-top: 8px;
+  flex-wrap: wrap;
 }
 
 .services-hero__btn {
@@ -91,6 +93,7 @@ gap: 32px;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .services-hero__btn--primary {
@@ -255,8 +258,8 @@ gap: 32px;
 }
 
 .services-practice__container {
-  max-width: 1440px;
-  margin: 0 auto;
+  /* max-width: 1440px;
+  margin: 0 auto; */
   display: grid;
   grid-template-columns: 425px 1fr;
   gap: 103px;
@@ -400,7 +403,6 @@ gap: 10px;
 
   .services-industries__grid {
     grid-template-columns: repeat(2, 1fr);
-    /* gap: 60px; */
     gap: 40px;
   }
   .services-practice {
@@ -416,119 +418,6 @@ gap: 10px;
     padding: 60px 48px;
   }
 }
-
-/* @media (max-width: 768px) {
-  .services-hero {
-    height: 600px;
-  }
-
-  .services-hero__content {
-    padding-left: 32px;
-    max-width: 100%;
-    gap: 20px;
-  }
-
-  .services-hero__title {
-    font-size: 40px;
-    letter-spacing: -0.8px;
-  }
-
-  .services-industries {
-    padding: 48px 32px;
-  }
-
-  .services-industries__grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .services-industries__title {
-    font-size: 36px;
-  }
-
-  .services-practice {
-    padding: 48px 32px;
-  }
-
-  .services-practice__container {
-    grid-template-columns: 1fr;
-  }
-
-  .practice-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .practice-card {
-    border: 0.5px solid #6b7280 !important;
-  }
-
-  .services-practice__title {
-    font-size: 36px;
-  }
-}
-
-@media (max-width: 480px) {
-  .services-hero {
-    height: 500px;
-  }
-
-  .services-hero__content {
-    padding-left: 16px;
-    gap: 16px;
-  }
-
-  .services-hero__title {
-    font-size: 32px;
-    letter-spacing: -0.64px;
-  }
-
-  .services-hero__description {
-    font-size: 14px;
-  }
-
-  .services-hero__buttons {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .services-industries {
-    padding: 32px 16px;
-  }
-
-  .services-industries__grid {
-    gap: 20px;
-  }
-
-  .services-industries__title {
-    font-size: 28px;
-  }
-
-  .industry-card {
-    padding: 20px;
-    gap: 16px;
-  }
-
-  .services-practice {
-    padding: 32px 16px;
-  }
-
-  .services-practice__left {
-    gap: 20px;
-  }
-
-  .services-practice__title {
-    font-size: 28px;
-  }
-
-  .services-practice__text p {
-    font-size: 14px;
-  }
-
-  .practice-card {
-    padding: 16px;
-    height: auto;
-  }
-} */
  @media (max-width: 768px) {
   /* Hero */
   .services-hero {
@@ -560,6 +449,21 @@ gap: 10px;
   .services-hero__description {
     max-width: 100%;
   }
+  .services-hero__buttons {
+    /* justify-content: center;        */
+    gap: 12px;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+  }
+   .services-hero__btn--primary,
+   .services-hero__btn--secondary{
+    flex: 0 0 auto;
+    width: auto;
+    padding: 14px 20px;
+    font-size: 15px;
+    white-space: nowrap;
+   }
  
   /* Industries */
   .services-industries {
@@ -633,12 +537,11 @@ gap: 10px;
     width: 100%;
     text-align: center;
   } */
-   .services-hero {
+   /* .services-hero {
     min-height: 520px;
   }
  
   .services-hero__content {
-    /* padding: 48px 20px 48px; */
     padding: 48px 60px;
     gap: 16px;
   }
@@ -663,8 +566,42 @@ gap: 10px;
     flex: 1 1 auto;
     text-align: center;
     white-space: nowrap;
+  } */
+   .services-hero {
+    min-height: 460px;
   }
- 
+
+  .services-hero__content {
+    padding: 48px 20px;
+    gap: 16px;
+  }
+
+  .services-hero__title {
+    font-size: 30px;
+    letter-spacing: -0.6px;
+  }
+
+  .services-hero__description {
+    font-size: 14px;
+  }
+.services-hero__buttons {
+    /* justify-content: center;        */
+    gap: 12px;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+  }
+   .services-hero__btn--primary,
+   .services-hero__btn--secondary{
+    flex: 0 0 auto;
+    width: auto;
+    padding: 14px 20px;
+    font-size: 15px;
+    white-space: nowrap;
+   }
+  
+
+  
   /* Industries */
   .services-industries {
     padding: 32px 16px;

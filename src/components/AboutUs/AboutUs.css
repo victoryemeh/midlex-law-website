@@ -1,28 +1,6 @@
 /* About Us Page Styles */
 
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 80px;
-}
 
-@media (max-width: 1024px) {
-  .container {
-    padding: 0 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 0 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0 16px;
-  }
-}
 
 .section-tag {
   font-family: "Inter Display", sans-serif;
@@ -43,7 +21,7 @@
 }
 
 /* Hero Section */
-.about-hero {
+/* .about-hero {
   position: relative;
   width: 100%;
   min-height: 368px;
@@ -135,8 +113,89 @@
   font-weight: 400;
   color: #030712;
   line-height: normal;
-  
-  /* max-width: 500px; */
+} */
+ /* Hero Section */
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 368px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center 30%;
+  overflow: hidden;
+}
+
+.about-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(245, 240, 232, 0.88) 0%,
+    rgba(237, 232, 220, 0.8) 50%,
+    rgba(232, 224, 208, 0.55) 100%
+  );
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.about-hero__content {
+  position: relative;
+  z-index: 2;
+  /* padding-left: 80px; */
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-hero__heading {
+  font-family: "Libre Caslon Condensed", serif;
+  font-size: 48px;
+  font-weight: 550;
+  color: #0d3728;
+  letter-spacing: -0.96px;
+  margin: 0;
+  line-height: 1;
+}
+
+.about-hero__desc {
+  font-family: "Inter Display", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #030712;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-hero__content {
+    padding-left: 40px;
+  }
+
+  .about-hero__heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    height: 280px;
+  }
+
+  .about-hero__content {
+    padding-left: 20px;
+  }
+
+  .about-hero__heading {
+    font-size: 28px;
+  }
+
+  .about-hero__desc {
+    font-size: 14px;
+  }
 }
 
 /* Who We Are Section */
@@ -144,18 +203,11 @@
   background: #fff;
 }
 
-/* .who-we-are .container {
-  
-  display: flex;
-width: 1440px;
-padding: 80px 80px 40px 80px;
-align-items: center;
-gap: 107px;
-} */
+
 .who-we-are .container {
   display: flex;
   width: 100%;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   padding: 80px;
   align-items: center;
   gap: 107px;
