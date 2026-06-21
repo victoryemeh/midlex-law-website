@@ -1,7 +1,16 @@
+
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { assets } from "../../assets";
-const COMPANY_LINKS = ["About Us", "Practice Areas", "Our Team", "Contact Us"];
+
+const COMPANY_LINKS = [
+  { label: "About Us", href: "/about" },
+  { label: "Practice Areas", href: "/services" },
+  { label: "Our Team", href: "/our-team" },
+  { label: "Contact Us", href: "/contact" },
+];
+
 const PRACTICE_AREAS = [
   "Litigation",
   "Mediation",
@@ -27,21 +36,22 @@ export default function Footer() {
             ecosystem where law is practiced with a Midas Touch.
           </p>
         </div>
+
         <div className="footer-info-container">
           <div className="footer-content-company">
             <p className="footer__col-heading">Company</p>
-            <div className="footer-contact">
-              {COMPANY_LINKS.map((l) => (
-                <p key={l} className="footer__link">
-                  {l}
-                </p>
+            <div className="footer__links">
+              {COMPANY_LINKS.map((link) => (
+                <Link key={link.label} to={link.href} className="footer__link">
+                  {link.label}
+                </Link>
               ))}
             </div>
           </div>
 
           <div className="footer-content-practice">
             <p className="footer__col-heading">Practice Areas</p>
-            <div className="footer-contact">
+            <div className="footer__links">
               {PRACTICE_AREAS.map((l) => (
                 <p key={l} className="footer__link">
                   {l}
@@ -59,11 +69,13 @@ export default function Footer() {
                   alt="Location Icon"
                   className="footer__icon"
                 />
-                1, Owa Street, Off Wire Road
-                <br />
-                Beside Samotaka Generators
-                <br />
-                Benin City, Edo State
+                <span>
+                  1, Owa Street, Off Wire Road
+                  <br />
+                  Beside Samotaka Generators
+                  <br />
+                  Benin City, Edo State
+                </span>
               </div>
               <div className="footer__contact-line">
                 <img
@@ -71,7 +83,7 @@ export default function Footer() {
                   alt="Phone Icon"
                   className="footer__icon"
                 />
-                <span className="footer__phone-number">+234 703 466 9498</span>
+                <span className="footer__phone-number">+234 703 456 9498</span>
               </div>
               <div className="footer__contact-line">
                 <img
