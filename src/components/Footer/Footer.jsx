@@ -6,7 +6,7 @@ import { assets } from "../../assets";
 
 const COMPANY_LINKS = [
   { label: "About Us", href: "/about" },
-  { label: "Practice Areas", href: "/services" },
+  { label: "Practice Areas", href: "/practice-areas" },
   { label: "Our Team", href: "/our-team" },
   { label: "Contact Us", href: "/contact" },
 ];
@@ -26,7 +26,7 @@ export default function Footer() {
         <div className="footer__brand">
           <div className="footer__logo">
             <img
-              src={assets.logo}
+              src={assets.Midlex}
               alt="Midlex Logo"
               className="footer__logo-image"
             />

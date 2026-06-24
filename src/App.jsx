@@ -9,6 +9,9 @@ import FullArticle2 from "./components/Articles/FullArticle2";
 import Contact from "./components/Contact/Contact";
 import TeamMemberProfile from "./components/TeamMemberProfile/TeamMemberProfile";
 import Services from "./components/Services/Services";
+import PracticeAreas from "./components/PracticeAreas/PracticeAreas";
+import Industries from "./components/Industries/Industries";
+
 
 const App = () => {
   return (
@@ -24,6 +27,8 @@ const App = () => {
           <Route path="/articles" element={<Articles />} />
           <Route path="/fullarticle2" element={<FullArticle2 />} />
           <Route path="/articles/:slug" element={<FullArticle />} />
+          <Route path="/practice-areas" element={<PracticeAreas />} />
+          <Route path="/industries" element={<Industries />} />
         </Routes>
       </div>
     </BrowserRouter>

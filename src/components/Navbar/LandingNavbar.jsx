@@ -16,7 +16,7 @@ export default function LandingNavbar({ scrolled, menuOpen, setMenuOpen }) {
         <div className="navbar__logo">
           <Link to="/">
             <img
-              src={assets.logo}
+              src={assets.Midlex}
               alt="Midlex Logo"
               className="navbar__logo-image"
             />

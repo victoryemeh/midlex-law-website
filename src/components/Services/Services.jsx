@@ -4,6 +4,7 @@ import CtaBand from "../CtaBand/CtaBand";
 import Footer from "../Footer/Footer";
 import { assets } from "../../assets";
 import "./Services.css";
+import { Link } from "react-router-dom";
 
 const INDUSTRIES = [
   {
@@ -195,12 +196,16 @@ export default function Services() {
             transaction.
           </p>
           <div className="services-hero__buttons">
-            <button className="services-hero__btn services-hero__btn--primary">
-              Industries
-            </button>
-            <button className="services-hero__btn services-hero__btn--secondary">
-              Practice Areas
-            </button>
+            <Link to="/industries">
+              <button className="services-hero__btn services-hero__btn--primary">
+                Industries
+              </button>
+            </Link>
+            <Link to="/practice-areas">
+              <button className="services-hero__btn services-hero__btn--secondary">
+                Practice Areas
+              </button>
+            </Link>
           </div>
         </div>
       </section>

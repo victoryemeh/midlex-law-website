@@ -185,7 +185,7 @@ body::-webkit-scrollbar {
   gap: 10px;
 }
 
-.navbar__logo-icon {
+/* .navbar__logo-icon {
   width: 44px;
   height: 44px;
   background: #2d5a3d;
@@ -200,10 +200,10 @@ body::-webkit-scrollbar {
   font-family: "Inter Display", serif;
   font-weight: 700;
   font-size: 18px;
-}
+} */
 
 .navbar__logo-image {
-  height: 80px;
+  /* height: 80px; */
   width: auto;
   max-width: 110px;
   object-fit: contain;
@@ -887,8 +887,8 @@ body::-webkit-scrollbar {
    ============================================================ */
 .footer {
   background: #0d3728;
-  /* padding: 64px 80px; */
-  padding:80px 80px 0;
+  /* padding:80px 80px 0; */
+   padding:80px 20px 0;
   display: flex;
   color: #f9fafb;
   flex-direction: column;
@@ -935,9 +935,14 @@ body::-webkit-scrollbar {
   align-items: flex-start;
   gap: 16px;
 } */
+ .footer__logo {
+  display: flex;
+  align-items: center;
+}
  .footer__logo-image {
-  height: 36px;
+  /* height: 63px; */
   width: auto;
+  max-width: 110px;
 }
 
 .footer__tagline {
@@ -991,16 +996,13 @@ body::-webkit-scrollbar {
   align-items: flex-start;
 }
 
-.footer__logo {
-  display: flex;
-  align-items: center;
-}
 
-.footer__logo-letter {
+
+/* .footer__logo-letter {
   color: #b8963e;
   font-weight: 700;
   font-size: 16px;
-}
+} */
 
 .footer__col-heading {
   font-family: "Libre Caslon Condensed", serif;

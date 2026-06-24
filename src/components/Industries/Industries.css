@@ -1,0 +1,366 @@
+* Practice Area Page */
+ 
+.industry-area-page {
+  width: 100%;
+  background-color: #ffffff;
+}
+ 
+/* Hero Section */
+.industry-hero {
+  position: relative;
+  width: 100%;
+  padding: 140px 80px 56px;
+  overflow: hidden;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 757px;
+}
+ 
+.industry-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  
+   background: linear-gradient(
+    105deg,
+    rgba(245, 240, 232, 0.92) 0%,
+    rgba(237, 232, 220, 0.88) 50%,
+    rgba(232, 224, 208, 0.7) 100%
+  );
+  /* opacity: 0.2; */
+  pointer-events: none;
+}
+ 
+.industry-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ 
+/* .industry-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    105deg,
+    rgba(245, 240, 232, 0.92) 0%,
+    rgba(237, 232, 220, 0.88) 50%,
+    rgba(232, 224, 208, 0.7) 100%
+  );
+  opacity: 0.2;
+  pointer-events: none;
+} */
+ 
+.industry-hero__content {
+  position: relative;
+  z-index: 2;
+  /* max-width: 900px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+ 
+.industry-hero__title {
+  font-family: "Libre Caslon Condensed", serif;
+  font-size: 48px;
+  font-weight: 500;
+  color: #0D3728;
+  letter-spacing: -0.96px;
+  line-height: normal;
+  font-style: normal;
+}
+ 
+.industry-hero__text {
+  font-family: "Inter Display", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #030712;
+  line-height: normal;
+  font-style: normal;
+}
+ 
+/* Hero Image */
+.industry-hero-image {
+    position: relative;
+    z-index: 3;
+  width: 100%;
+  padding: 0 80px;
+  margin: -320px auto 64px;
+  max-width: 1440px;
+}
+ 
+.industry-hero-image__wrapper {
+  width: 100%;
+  /* height: 440px; */
+  overflow: hidden;
+  /* border-radius: 4px; */
+}
+ 
+.industry-hero-image__wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+ 
+/* Practice Areas List */
+.industry-list {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 80px 96px;
+}
+ 
+.industry-list__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 64px;
+  align-items: start;
+}
+ 
+.industry-list__column {
+  display: flex;
+  flex-direction: column;
+}
+ 
+.industry-item {
+  border-bottom: 1px solid #000;
+}
+ 
+.industry-item__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 16px 0;
+  text-align: left;
+}
+ 
+.industry-item__title {
+  font-family: "Inter Display", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #030712;
+  transition: color 0.2s ease;
+}
+ 
+.industry-item.open .industry-item__title {
+  color: #10633b;
+  font-weight: 550;
+}
+ 
+.industry-item__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #10633b;
+  line-height: 1;
+}
+ 
+.industry-item__header:hover .practice-item__title {
+  color: #10633b;
+}
+ 
+.industry-item__description {
+  font-family: "Inter Display", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #4c545f;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 0 20px;
+}
+ 
+/* The Midlex Standard */
+.midlex-standard {
+  width: 100%;
+  background-color: #f3f4f6;
+  padding: 80px 80px;
+}
+ 
+.midlex-standard__container {
+  /* max-width: 900px; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  
+}
+ 
+.midlex-standard__title {
+  font-family: "Libre Caslon Condensed", serif;
+  font-size: 36px;
+  font-weight: 550;
+  color: #0d3728;
+  letter-spacing: -0.72px;
+  margin: 0;
+  line-height: 1.2;
+}
+ 
+.midlex-standard__text {
+  font-family: "Inter Display", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #374151;
+  line-height: 1.7;
+  margin: 0;
+}
+ 
+.midlex-standard__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+ 
+.midlex-standard__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+ 
+.standard-check-icon {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+ 
+.midlex-standard__item p {
+  font-family: "Inter Display", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1f2937;
+  line-height: 1.6;
+  margin: 0;
+}
+ 
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .practice-hero {
+    padding: 120px 48px 48px;
+  }
+ 
+  .practice-hero__title {
+    font-size: 40px;
+  }
+ 
+  .practice-hero-image {
+    padding: 0 48px;
+  }
+ 
+  .practice-hero-image__wrapper {
+    height: 380px;
+  }
+ 
+  .practice-list {
+    padding: 0 48px 80px;
+  }
+ 
+  .practice-list__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 40px;
+  }
+ 
+  .midlex-standard {
+    padding: 64px 48px;
+  }
+}
+ 
+@media (max-width: 768px) {
+  .practice-hero {
+    padding: 100px 32px 40px;
+  }
+ 
+  .practice-hero__title {
+    font-size: 32px;
+    letter-spacing: -0.64px;
+  }
+ 
+  .practice-hero__text {
+    font-size: 13px;
+  }
+ 
+  .practice-hero-image {
+    padding: 0 32px;
+    margin-bottom: 48px;
+  }
+ 
+  .practice-hero-image__wrapper {
+    height: 280px;
+    border-radius: 0;
+  }
+ 
+  .practice-list {
+    padding: 0 32px 64px;
+  }
+ 
+  .practice-list__grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+ 
+  .midlex-standard {
+    padding: 56px 32px;
+  }
+ 
+  .midlex-standard__title {
+    font-size: 28px;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .practice-hero {
+    padding: 88px 20px 32px;
+  }
+ 
+  .practice-hero__title {
+    font-size: 28px;
+  }
+ 
+  .practice-hero-image {
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+ 
+  .practice-hero-image__wrapper {
+    height: 220px;
+  }
+ 
+  .practice-list {
+    padding: 0 20px 48px;
+  }
+ 
+  .practice-item__header {
+    padding: 14px 0;
+  }
+ 
+  .practice-item__title {
+    font-size: 14px;
+  }
+ 
+  .midlex-standard {
+    padding: 48px 20px;
+  }
+ 
+  .midlex-standard__title {
+    font-size: 24px;
+  }
+ 
+  .midlex-standard__text {
+    font-size: 14px;
+  }
+}
+ 
