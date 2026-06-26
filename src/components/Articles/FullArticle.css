@@ -84,7 +84,7 @@
 /* Article Header */
 .article-content {
   background: #f9fafb;
-  margin-bottom: 56px;
+  /* margin-bottom: 56px; */
 }
 
 .article-header {
@@ -130,7 +130,7 @@
 }
 
 .article-section {
-  padding: 48px 18px;
+  padding: 18px 18px;
 }
 
 .section-heading {
@@ -154,7 +154,8 @@
   margin-bottom: 0;
 }
 .articles-section {
-  padding: 48px 18px;
+  /* padding: 48px 18px; */
+  padding: 18px 18px;
   background: #fff;
 }
 

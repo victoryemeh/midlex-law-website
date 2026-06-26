@@ -372,7 +372,7 @@ export default function Contact() {
             <p className="fee-label">Consultation fee</p>
             <div className="fee-display">
               <span className="fee-duration">60 MINS</span>
-              <span className="fee-amount">₦10,000</span>
+              <span className="fee-amount">₦150,000</span>
             </div>
           </div>
           <button className="btn btn-primary btn-book">Book Now</button>

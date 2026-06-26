@@ -179,7 +179,6 @@ export default function Services() {
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
       />
-
       {/* Hero Section */}
       <section className="services-hero">
         <div className="services-hero__bg">
@@ -260,7 +259,6 @@ export default function Services() {
           ))}
         </div>
       </section>
-
       {/* Practice Areas Section */}
       <section className="services-practice">
         <div className="services-practice__container">
@@ -292,9 +290,11 @@ export default function Services() {
                 Midas Touch to a wide range of legal matters, including:
               </p>
             </div>
-            <button className="services-practice__btn">
-              Areas of Practice
-            </button>
+            <Link to="/practice-areas">
+              <button className="services-practice__btn">
+                Areas of Practice
+              </button>
+            </Link>
           </div>
 
           <div className="services-practice__right">
@@ -314,10 +314,8 @@ export default function Services() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <CtaBand />
-
       {/* Footer */}
       <Footer />
     </div>

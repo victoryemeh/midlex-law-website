@@ -5,10 +5,11 @@ import CtaBand from "../CtaBand/CtaBand";
 import Footer from "../Footer/Footer";
 import { assets } from "../../assets";
 import "./PracticeAreas.css";
+import { Link } from "react-router-dom";
 
 const practiceAreaColumns = [
   [
-    {
+    {link: "./litigation",
       title: "Litigation",
       description:
         "Representing clients before courts and tribunals across Nigeria, from commercial disputes to high-stakes appeals.",
@@ -198,16 +199,21 @@ export default function PracticeArea() {
                     className={`practice-item ${isOpen ? "open" : ""}`}
                     key={key}
                   >
-                    <button
-                      className="practice-item__header"
-                      onClick={() => toggleItem(key)}
-                      type="button"
-                    >
-                      <span className="practice-item__title">{item.title}</span>
-                      <span className="practice-item__icon">
-                        <img src={assets.arrowIcon} alt=""/>
-                      </span>
-                    </button>
+                    
+                      <button
+                        className="practice-item__header"
+                        onClick={() => toggleItem(key)}
+                        type="button"
+                      >
+                        <span className="practice-item__title">
+                          {item.title}
+                        </span>
+                        <span className="practice-item__icon">
+                          <img src={assets.arrowIcon} alt="" />
+                        </span>
+                      </button>
+                    
+
                     {/* {isOpen && (
                       <p className="practice-item__description">
                         {item.description}

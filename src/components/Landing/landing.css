@@ -203,10 +203,11 @@ body::-webkit-scrollbar {
 } */
 
 .navbar__logo-image {
-  /* height: 80px; */
+  height: 80px;
   width: auto;
-  max-width: 110px;
+  /* max-width: 110px; */
   object-fit: contain;
+  
 }
 
 .navbar__links {

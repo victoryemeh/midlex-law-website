@@ -84,7 +84,7 @@
 /* Article Header */
 .article-content {
   background: #f9fafb;
-  margin-bottom: 56px;
+  /* margin-bottom: 56px; */
 }
 
 .article-header {
@@ -129,9 +129,9 @@
   margin-bottom: 0;
 }
 
-.article-section {
+/* .article-section {
   margin-bottom: 24px;
-}
+} */
 
 .section-heading {
   font-family: "Inter Display", sans-serif;

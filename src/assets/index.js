@@ -90,6 +90,10 @@ import industryImage from "./industry-image.webp";
 import practiceherobg from "./practice-herobg.webp";
 import Midlex from "./Midlex.webp";
 import arrowIcon from "./arrow.svg";
+import electoralImage from "./electoral-matters.webp";
+import litigationImage from "./litigation-image.webp";
+import projectsImage from "./projects-and-infrastructure.webp";
+import propertyImage from "./property-and-realestate.webp";
 
 
 
@@ -186,4 +190,9 @@ export const assets = {
   practiceherobg,
   Midlex,
   arrowIcon,
+  electoralImage,
+  litigationImage,
+  propertyImage,
+  projectsImage,
+
 };

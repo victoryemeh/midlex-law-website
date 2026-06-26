@@ -204,8 +204,8 @@
 .team-member-carousel {
   display: flex;
   gap: 52px;
-  overflow-x: auto;
-  padding-bottom: 12px;
+  /* overflow-x: auto;
+  padding-bottom: 12px; */
 }
 
 .team-member-carousel::-webkit-scrollbar {
@@ -330,7 +330,7 @@
   }
  
   .team-member-card {
-    width: 340px;
+    width: 240px;
   }
 }
 
@@ -436,7 +436,7 @@
   }
  
   .team-member-card {
-    width: 300px;
+    width: 200px;
   }
  
   .team-member-card__image {

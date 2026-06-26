@@ -4,6 +4,7 @@ import { assets } from "../../assets";
 import LandingNavbar from "../Navbar/LandingNavbar";
 import CtaBand from "../CtaBand/CtaBand";
 import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
 
 export default function FullArticle2() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,6 +18,8 @@ export default function FullArticle2() {
 
   const relatedArticles = [
     {
+      slug: "sporting-justice-2",
+      link: "/fullarticle2",
       title: "CAF, AFCON & the Limits of Sporting Justice: A Legal Perspective",
       date: "25th May, 2026",
       image: assets.AfconCup,
@@ -24,6 +27,7 @@ export default function FullArticle2() {
         "The recent decision by the Confederation of African Football (CAF) to overturn the outcome of the AFCON final and award victory to Morocco has generated widespread legal and sporting controversy. Beyond the headlines, the issue raises a fundamental question in sports law: Can a governing body lawfully overturn a completed match",
     },
     {
+      slug: "remotework-productivity",
       title: "THE EFFECT OF REMOTEWORK ON EMPLOYEE PRODUCTIVITY",
       date: "25th May, 2026",
       image: assets.CouchMan,
@@ -31,6 +35,7 @@ export default function FullArticle2() {
         "The outbreak of the Coronavirus in 2020 led to different nations issuing directives to their citizens to stay indoors in order to contain the spread of the virus. For instance, in the United Kingdom, the Prime Minister issued various directives ordering UK residents to stay at home and also empowered the Police to breakup public gatherings and fine residents that disobey the directives.",
     },
     {
+      slug: "public-trust-justice",
       title: "CAF, AFCON & the Limits of Sporting Justice: A Legal Perspective",
       date: "25th May, 2026",
       image: assets.AfconCup,
@@ -237,28 +242,30 @@ export default function FullArticle2() {
               </section>
             </div>
           </article>
-          </div>
-          </section>
+        </div>
+      </section>
 
-          {/* Related Articles */}
-          <section className="article-section">
-          <div className="related-articles">
-            {relatedArticles.map((article, index) => (
-              <div key={index} className="article-card">
-                <div className="article-card-header">
-                  <h3 className="article-card-title">{article.title}</h3>
-                </div>
-                <div className="article-card-content">
-                  <div className="article-card-image">
-                    <img src={article.image} alt={article.title} />
-                  </div>
-                  <time className="article-card-date">{article.date}</time>
-                  <p className="article-card-excerpt">{article.excerpt}</p>
-                  <button className="read-more-btn">Read more</button>
-                </div>
+      {/* Related Articles */}
+      <section className="article-section">
+        <div className="related-articles">
+          {relatedArticles.map((article, index) => (
+            <div key={index} className="article-card">
+              <div className="article-card-header">
+                <h3 className="article-card-title">{article.title}</h3>
               </div>
-            ))}
-          </div>
+              <div className="article-card-content">
+                <div className="article-card-image">
+                  <img src={article.image} alt={article.title} />
+                </div>
+                <time className="article-card-date">{article.date}</time>
+                <p className="article-card-excerpt">{article.excerpt}</p>
+                <Link to={article.link || `/articles/${article.slug}`}>
+                  <button className="read-more-btn">Read more</button>
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* CTA Section */}

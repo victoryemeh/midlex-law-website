@@ -4,6 +4,7 @@ import { assets } from "../../assets";
 import LandingNavbar from "../Navbar/LandingNavbar";
 import CtaBand from "../CtaBand/CtaBand";
 import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
 
 /* ── Data ─────────────────────────────────────────────────── */
 
@@ -153,8 +154,12 @@ function Hero() {
           </p>
 
           <div className="hero__cta-group hero-anim-3">
+            <Link to= "/contact">
             <button className="btn-primary">Book a Consultation</button>
+            </Link>
+            <Link to="/about">
             <button className="btn-outline">Learn more</button>
+            </Link>
           </div>
         </div>
 
@@ -184,7 +189,9 @@ function About() {
               We are a unique and full-service law firm providing a wide range
               of legal services to clients both within and outside Nigeria.
             </p>
-            <button className="btn-primary">Read more</button>
+            <Link to="/about">
+              <button className="btn-primary">Read more</button>
+            </Link>
           </div>
 
           <div className="about__images">
@@ -205,6 +212,7 @@ function About() {
   );
 }
 
+
 function Services() {
   const [active, setActive] = useState(0);
   const isMobile = useWindowWidth() < 768;
@@ -219,6 +227,32 @@ function Services() {
     (_, offset) => SERVICES[(active + offset) % SERVICES.length],
   );
 
+  /* ── Swipe handling (mobile thumb-swipe) ── */
+  const touchStartX = useRef(null);
+  const touchDeltaX = useRef(0);
+  const SWIPE_THRESHOLD = 40; // px — how far a swipe must travel to count
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchDeltaX.current = 0;
+  };
+
+  const handleTouchMove = (e) => {
+    if (touchStartX.current === null) return;
+    touchDeltaX.current = e.touches[0].clientX - touchStartX.current;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current === null) return;
+    if (touchDeltaX.current <= -SWIPE_THRESHOLD) {
+      next(); // swiped left → next card
+    } else if (touchDeltaX.current >= SWIPE_THRESHOLD) {
+      prev(); // swiped right → previous card
+    }
+    touchStartX.current = null;
+    touchDeltaX.current = 0;
+  };
+
   return (
     <section className="services">
       <div className="container">
@@ -231,7 +265,9 @@ function Services() {
             A three-layered dispute resolution model anchored on consultation,
             mediation, and litigation.
           </p>
-          <button className="btn-primary">View more Services</button>
+          <Link to="./services">
+            <button className="btn-primary">View more Services</button>
+          </Link>
         </div>
 
         <div className="services__carousel">
@@ -243,7 +279,12 @@ function Services() {
             &#8249;
           </button>
 
-          <div className="services__track">
+          <div
+            className="services__track"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             {visible.map((service, i) => (
               <div key={service.name + i} className="service-card">
                 <div className="service-card__inner">
@@ -264,23 +305,11 @@ function Services() {
           </button>
         </div>
 
-        {/* Dot indicators for mobile */}
-
-        <div className="services__dots">
-          {/* {SERVICES.map((_, i) => (
-            <button
-              key={i}
-              className={`services__dot ${i === active ? "services__dot--active" : ""}`}
-              onClick={() => setActive(i)}
-              aria-label={`Go to service ${i + 1}`}
-            />
-          ))} */}
-        </div>
+        <div className="services__dots" />
       </div>
     </section>
   );
 }
-
 function Stats() {
   return (
     <section className="stats">
@@ -345,14 +374,18 @@ function Articles() {
               <img className="article-card__img" src={a.img} alt={a.title} />
               <div className="article-card__body">
                 <h3 className="article-card__title">{a.title}</h3>
-                <button className="btn-read-more">Read more</button>
+                <Link to="/articles">
+                  <button className="btn-read-more">Read more</button>
+                </Link>
               </div>
             </div>
           ))}
         </div>
 
         <div className="articles__see-more">
-          <button className="btn-primary">See more</button>
+          <Link to="/articles">
+            <button className="btn-primary">See more</button>
+          </Link>
         </div>
       </div>
     </section>

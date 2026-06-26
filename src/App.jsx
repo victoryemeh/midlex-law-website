@@ -11,6 +11,7 @@ import TeamMemberProfile from "./components/TeamMemberProfile/TeamMemberProfile"
 import Services from "./components/Services/Services";
 import PracticeAreas from "./components/PracticeAreas/PracticeAreas";
 import Industries from "./components/Industries/Industries";
+import Litigation from "./components/Litigation/Litigation";
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/articles/:slug" element={<FullArticle />} />
           <Route path="/practice-areas" element={<PracticeAreas />} />
           <Route path="/industries" element={<Industries />} />
+          <Route path="/litigation" element={<Litigation/>}/>
         </Routes>
       </div>
     </BrowserRouter>

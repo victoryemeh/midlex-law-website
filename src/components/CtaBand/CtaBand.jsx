@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function CtaBand() {
   return (
     <section className="cta-band">
@@ -7,7 +8,9 @@ export default function CtaBand() {
       <p className="cta-band__sub sans">
         Contact us today for a comprehensive consultation on your legal needs.
       </p>
-      <button className="btn-gold">Book a Consultation</button>
+      <Link to="/contact">
+        <button className="btn-gold">Book a Consultation</button>
+      </Link>
     </section>
   );
 }
