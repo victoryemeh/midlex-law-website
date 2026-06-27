@@ -288,6 +288,19 @@
 .calendar-date.other-month {
   color: #bcc1ca;
 }
+.calendar-date.disabled {
+  color: #999;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.calendar-date.selected {
+  color: #10633b;
+  
+}
+.slots-status { font-size: 0.85rem; color: #777; }
+.slots-status--error { color: #c0392b; }
+.booking-error { color: #c0392b; font-size: 0.85rem; margin-top: 8px; }
+
 
 .time-slots {
   display: flex;
