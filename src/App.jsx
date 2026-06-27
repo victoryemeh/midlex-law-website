@@ -12,11 +12,12 @@ import Services from "./components/Services/Services";
 import PracticeAreas from "./components/PracticeAreas/PracticeAreas";
 import Industries from "./components/Industries/Industries";
 import Litigation from "./components/Litigation/Litigation";
-
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
     <BrowserRouter>
+    <ScrollToTop/>
       <div className="app">
         <Routes>
           <Route path="/" element={<MidlexLanding />} />

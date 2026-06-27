@@ -1297,7 +1297,13 @@ body::-webkit-scrollbar {
     gap: 32px;
     align-items: center;
   }
-
+.about__heading{
+  font-size: clamp(34px, 9.5vw, 32px);
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 12px;
+}
   .about__text {
     flex: unset;
     max-width: 100%;
